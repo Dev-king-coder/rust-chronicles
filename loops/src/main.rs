@@ -28,4 +28,19 @@ fn main() {
         count += 1;
     }
     println!("End count={count}");
+
+    // while
+    let mut number = 3;
+    while number != 0 {
+        println!("{number}!");
+        number -= 1;
+    }
+    println!("LIFTOFF!!!");
+
+    // for
+    // rev,reverses the range
+    for number in (1..4).rev() {
+        println!("{number}!");
+    }
+    println!("LIFTOFF!!!");
 }
