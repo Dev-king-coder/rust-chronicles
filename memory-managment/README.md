@@ -111,6 +111,6 @@ fn main() {
     println!("{full}, originally {first}");
 }
 ```
-![Cloning](images\cloning-code-4.png)
+![Cloning](images\cloning-code-4.png)(https://github.com/Dev-king-coder/rust-chronicles/blob/main/memory-managment/images/cloning-code-4.png)
 
 
