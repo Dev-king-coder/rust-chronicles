@@ -16,15 +16,15 @@ let s = format!("{} {}", m1, m2);
 - **greet** function takes **&String** as parameter, which is a reference to a String.
 ```bash
 // OUTPUT
-PS F:\Users\devke\Documents\rust-projects\memory-managment\ref_n_bor> cargo run
-   Compiling ref_n_bor v0.1.0 (F:\Users\devke\Documents\rust-projects\memory-managment\ref_n_bor)
+PS F:\Users\devke\Documents\rust-projects\memory-management\ref_n_bor> cargo run
+   Compiling ref_n_bor v0.1.0 (F:\Users\devke\Documents\rust-projects\memory-management\ref_n_bor)
     Finished dev [unoptimized + debuginfo] target(s) in 3.47s
      Running `target\debug\ref_n_bor.exe`
 Hello world!
 ```
 ---
 ## [Example-3](src/main.rs)
-- **Deferencing** is used to access the value of a reference.
+- **Dereferencing** is used to access the value of a reference.
 - **\*** is used to deference a reference.
 
 ![example-3](images/example-3.png)

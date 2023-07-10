@@ -5,7 +5,7 @@ It ensures the safety of memory by having only one owner at a time. Discipline f
 
 - Program Safety: To ensure that our programs never have a undefined behavior
 - Memory Safety: To ensure that our programs never access invalid memory
-- Prevent undefind behaviour at compile time: Avoiding bugs at runtime
+- Prevent undefined behavior at compile time: Avoiding bugs at runtime
 - Catching bugs at compile-time means fewer runtime checks for those bugs, improving the performance of your software.
 
 How rust has helped in memory safety, check out this [Google Security blog](https://security.googleblog.com/2022/12/memory-safe-languages-in-android-13.html) for details.
