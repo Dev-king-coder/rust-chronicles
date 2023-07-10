@@ -22,3 +22,13 @@ PS F:\Users\devke\Documents\rust-projects\memory-managment\ref_n_bor> cargo run
      Running `target\debug\ref_n_bor.exe`
 Hello world!
 ```
+---
+## [Example-3](src/main.rs)
+- **Deferencing** is used to access the value of a reference.
+- **\*** is used to deference a reference.
+
+![example-3](images/example-3.png)
+---
+
+## Challenge-1
+![challenge-1](images/challenge-1.png)
