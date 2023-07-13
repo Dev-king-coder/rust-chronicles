@@ -35,3 +35,5 @@ Hello world!
 ---
 ## Pointer Safety Principle
 > data should never be aliased and mutated at the same time.
+
+![example-4](images/example-4.png)
