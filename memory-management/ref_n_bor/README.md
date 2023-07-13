@@ -32,3 +32,6 @@ Hello world!
 
 ## Challenge-1
 ![challenge-1](images/challenge-1.png)
+---
+## Pointer Safety Principle
+> data should never be aliased and mutated at the same time.
