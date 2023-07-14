@@ -8,4 +8,5 @@ A variable have three permissions on their data
 - **References** are non-owning pointers, because they do not own the data they point to.
 - By default, a variable has read/own permissions (RO) on its data.
 - With ` let mut ` a variable has write permissions (W) on its data.
-- References can temporarily remove these permissions
+- References can temporarily remove these permissions.
+- Mutable References provide unique and non-owning access to data.
