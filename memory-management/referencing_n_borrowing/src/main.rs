@@ -1,37 +1,24 @@
-// NOTE: Run each example separately as many "main" functions are defined
-
-// Example-1
-//  Does not compile
-//  One way to make it work is-
-//  return g1,g2 from greet in new variables
-//  which in turn act as data entries to main variable "s"
 fn main() {
+    // Example-1
+        //  Does not compile
+        //  One way to make it work is-
+        //  return g1,g2 from greet in new variables
+        //  which in turn act as data entries to main variable "s"
     let m1 = String::from("Hello");
     let m2 = String::from("world");
     greet(m1, m2);
     // let (m1_again, m2_again) = greet(m1, m2);
     let s = format!("{} {}", m1, m2); // Error: m1 and m2 are moved
     // let s = format!("{} {}", m1_again, m2_again);
-}
 
-fn greet(g1: String, g2: String) {
-    println!("{} {}!", g1, g2);
-}
 
-// Example-2
-fn main() {
+    // Example-2
     let m1 = String::from("Hello");
     let m2 = String::from("world");
     greet(&m1, &m2); // note the ampersands
     let _s = format!("{} {}", m1, m2);
-}
 
-fn greet(g1: &String, g2: &String) { // note the ampersands
-    println!("{} {}!", g1, g2);
-}
-
-// Example-3
-fn main() {
+    // Example-3
     let mut x: Box<i32> = Box::new(1);
     let a: i32 = *x;         // *x reads the heap value, so a = 1
     *x += 1;                 // *x on the left-side modifies the heap value, 
@@ -60,4 +47,12 @@ fn main() {
     let s_len2 = s.len();      // implicit reference, its further converted to str from String
     assert_eq!(s_len1, s_len2);
     println!("{x};{x_abs1};{x_abs2};{r};{r_abs1};{r_abs2};{s};{s_len1};{s_len2}");
+}
+
+fn greet(g1: String, g2: String) {
+    println!("{} {}!", g1, g2);
+}
+
+fn greet(g1: &String, g2: &String) { // note the ampersands
+    println!("{} {}!", g1, g2);
 }
