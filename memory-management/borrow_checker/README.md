@@ -3,6 +3,7 @@ A variable have three permissions on their data
 - **Read(R)**: data can be copied to another location.
 - **Write(W)**: data can be mutated in-place.
 - **Own(O)**: data can be moved or dropped.
+- **Flow(F)**:  expected whenever an expression uses an input reference
 
 ## Key Points:
 - **References** are non-owning pointers, because they do not own the data they point to.
