@@ -32,4 +32,10 @@ fn main() {
     println!("{} {}", *num, *num2);
     // the borrow &*num removes the W permission from *num but not the R permission,
     // so println!(..) can read both *num and *num2.
+
+    let mut s = String::from("hello");
+    let s2 = &s;
+    let s3 = &mut s;
+    s3.push_str(" world");
+    //println!("{s2}");
 }

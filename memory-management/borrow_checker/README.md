@@ -10,3 +10,4 @@ A variable have three permissions on their data
 - With ` let mut ` a variable has write permissions (W) on its data.
 - References can temporarily remove these permissions.
 - Mutable References provide unique and non-owning access to data.
+-  A reference changes permissions while it is "in use". The phrase "in use" is describing a reference's lifetime.
