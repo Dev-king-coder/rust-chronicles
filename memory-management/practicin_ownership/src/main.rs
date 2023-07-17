@@ -103,3 +103,34 @@ fn add_big_strings_2(dst: &mut Vec<String>, src: &[String]) {
     }
 }
 
+// Code-4
+// we have a vector of non-Copy types like String,
+// then how do we safely get access to an element of the vector
+// Solution-1
+fn get_string_1(){
+    // avoid taking ownership of string
+    // using immutable reference
+    let v: Vec<String> = vec![String::from("Hello world")];
+    let s_ref: &String = &v[0];
+    println!("{s_ref}!");
+}
+
+// Solution-2
+fn get_string_2(){
+    // for ownership
+    // clone the data
+    let v: Vec<String> = vec![String::from("Hello world")];
+    let mut s: String = v[0].clone();
+    s.push('!');
+    println!("{s}");
+}
+
+// Solution-3
+fn get_string_3(){
+    let mut v: Vec<String> = vec![String::from("Hello world")];
+    // using v.remove(0) removes vector
+    let mut s: String = v.remove(0);
+    s.push('!');
+    println!("{s}");
+    assert!(v.len() == 0);
+}

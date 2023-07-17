@@ -35,3 +35,20 @@ fn add_big_strings(dst: &mut Vec<String>, src: &[String]) {
 }
 ```
 ---
+## Code-4
+- An i32 does not own heap data, so it can be copied without a move.
+```rust
+fn main() {
+    let v: Vec<i32> = vec![0, 1, 2];
+    let n_ref: &i32 = &v[0];
+    let n: i32 = *n_ref;
+}
+```
+- A String does own heap data, so it can not be copied without a move.
+```rust
+fn main() {
+    let v: Vec<String> = vec![String::from("a"), String::from("b")];
+    let s_ref: &String = &v[0];
+    let s: String = *s_ref;
+}
+```
