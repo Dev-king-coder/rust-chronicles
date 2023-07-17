@@ -1,3 +1,4 @@
+#![allow(unused)]
 fn main() {
     // run: Code-1
     return_a_string_1();
@@ -75,3 +76,30 @@ fn stringify_name_with_title_4(name: &Vec<String>) -> String {
     full.push_str(" Esq.");
     full
 }
+
+// Code-3
+// dst.push(..) requires the W permission
+// let largest = .. removes the W permissions on dst.
+// Solution-1
+fn add_big_strings_1(dst: &mut Vec<String>, src: &[String]) {
+    // cloning largest
+    let largest: String = dst.iter().max_by_key(|s| s.len()).unwrap().clone();
+    for s in src {
+        if s.len() > largest.len() {
+            dst.push(s.clone());
+        }
+    }
+    // cloning is expensive
+}
+
+// Solution-2
+// just using the length of the largest string
+fn add_big_strings_2(dst: &mut Vec<String>, src: &[String]) {
+    let largest_len: usize = dst.iter().max_by_key(|s| s.len()).unwrap().len();
+    for s in src {
+        if s.len() > largest_len {
+            dst.push(s.clone());
+        }
+    }
+}
+

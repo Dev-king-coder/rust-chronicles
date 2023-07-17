@@ -19,3 +19,19 @@ fn stringify_name_with_title(name: &Vec<String>) -> String {
 }
 // ideally: ["Ferris", "Jr."] => "Ferris Jr. Esq."
 ```
+---
+
+## Code-3
+> **PROBLEM**: Using a reference to heap data that gets deallocated by another alias.
+```rust
+fn add_big_strings(dst: &mut Vec<String>, src: &[String]) {
+    let largest: &String = 
+      dst.iter().max_by_key(|s| s.len()).unwrap();
+    for s in src {
+        if s.len() > largest.len() {
+            dst.push(s.clone());
+        }
+    }
+}
+```
+---
